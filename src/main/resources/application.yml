@@ -1,0 +1,23 @@
+
+server:
+  port: 8088
+  servlet:
+    context-path: /demo
+spring:
+  datasource:
+    url: jdbc:mysql://124.222.96.172:5315/test_demo
+    driver-class-name: com.mysql.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+    password: root
+    username: root
+
+
+mybatis:
+  mapper-locations: classpath:mapping/IUserRepository.xml
+  type-aliases-package: com.ljq.demo.entity
+
+logging:
+  level:
+    com:
+      example:
+        demo: debug
